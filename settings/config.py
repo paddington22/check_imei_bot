@@ -33,7 +33,7 @@ class Settings(BaseSettings):
 settings = Settings()
 
 REGISTERED_MODELS_LIST = [
-
+    "core.database.users",
 ]
 
 TORTOISE_CONFIG = {
