@@ -3,7 +3,7 @@ name = "check-imei-bot"
 version = "0.1.0"
 description = "Add your description here"
 authors = [
-    { name = "paddington22", email = "pkorolev23@gmail.com" }
+    { name = "paddington22", email = "pkorolev23@gmail.com" },
 ]
 dependencies = [
     "fastapi>=0.115.7",
@@ -15,12 +15,15 @@ dependencies = [
     "tortoise>=0.1.1",
     "aerich>=0.8.1",
     "snowflake-id>=1.0.2",
+    "tomli-w>=1.2.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
 
 [build-system]
-requires = ["hatchling"]
+requires = [
+    "hatchling",
+]
 build-backend = "hatchling.build"
 
 [tool.rye]
@@ -31,4 +34,11 @@ dev-dependencies = []
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/check_imei_bot"]
+packages = [
+    "src/check_imei_bot",
+]
+
+[tool.aerich]
+tortoise_orm = "settings.config.TORTOISE_CONFIG"
+location = "./migrations"
+src_folder = "./."

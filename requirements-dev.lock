@@ -77,6 +77,8 @@ snowflake-id==1.0.2
     # via check-imei-bot
 starlette==0.45.2
     # via fastapi
+tomli-w==1.2.0
+    # via check-imei-bot
 tortoise==0.1.1
     # via check-imei-bot
 tortoise-orm==0.24.0
