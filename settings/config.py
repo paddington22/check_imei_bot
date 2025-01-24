@@ -1,4 +1,5 @@
 from pathlib import Path
+from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,6 +21,8 @@ class Settings(BaseSettings):
     BOT_WEBHOOK_URL: str
 
     SALT: str
+    ACCESS_TOKEN_EXPIRE_SECONDS: int = 18000  #5 hours
+    ACCESS_TOKEN_SECRET: SecretStr
 
     def pg_conn(self):
         return {

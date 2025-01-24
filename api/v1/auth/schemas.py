@@ -8,3 +8,14 @@ class RegistrationRequest(BaseModel):
 
 class RegistrationResponse(BaseModel):
     username: str
+
+
+class GetToken(RegistrationRequest):
+    pass
+
+
+class TokenResponse(BaseModel):
+    access_token: str
+    token_type: str
+
+
