@@ -16,6 +16,7 @@ dependencies = [
     "aerich>=0.8.1",
     "snowflake-id>=1.0.2",
     "tomli-w>=1.2.0",
+    "asyncpg>=0.30.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
