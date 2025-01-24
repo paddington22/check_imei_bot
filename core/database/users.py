@@ -8,3 +8,5 @@ class Users(BaseTortoiseModel):
     telegram_id = fields.BigIntField(null=True)
     telegram_context = fields.JSONField(default={})
 
+    class Meta:
+        table = "users"
