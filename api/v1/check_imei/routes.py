@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from .schemas import ImeiRequest
-from  utils.request import get_request
+from utils.request import get_request
 
 router = APIRouter(prefix="/check-imei", tags=["Check-imei"])
 
