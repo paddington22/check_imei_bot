@@ -19,6 +19,8 @@ class Settings(BaseSettings):
     CLIENTS_BOT_TOKEN: str
     BOT_WEBHOOK_URL: str
 
+    SALT: str
+
     def pg_conn(self):
         return {
             "host": self.POSTGRES_HOST,
