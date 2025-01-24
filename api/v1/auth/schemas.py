@@ -2,12 +2,12 @@ from pydantic import BaseModel
 
 
 class RegistrationRequest(BaseModel):
-    username: str
+    telegram_username: str
     password: str
 
 
 class RegistrationResponse(BaseModel):
-    username: str
+    telegram_username: str
 
 
 class GetToken(RegistrationRequest):

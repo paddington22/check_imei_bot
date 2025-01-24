@@ -10,19 +10,19 @@ router = APIRouter(prefix="/auth", tags=["Auth"])
 @router.post("/registration")
 async def registrate_user(payload: RegistrationRequest) -> RegistrationResponse:
     new_user = await Users.create(
-        username=payload.username,
+        telegram_username=payload.telegram_username,
         hash_password=get_hash(payload.password),
     )
 
     return RegistrationResponse(
-        username=new_user.username
+        telegram_username=new_user.telegram_username
     )
 
 
 @router.post("/token")
 async def get_user_bearer_token(auth_data: GetToken) -> TokenResponse:
     user = await Users.get_or_none(
-        username=auth_data.username,
+        telegram_username=auth_data.telegram_username,
         hash_password=get_hash(auth_data.password)
     )
     if not user:
