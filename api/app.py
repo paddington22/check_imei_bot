@@ -13,6 +13,7 @@ async def lifespan(_: FastAPI):
     webhook_base_url = settings.BOT_WEBHOOK_URL
     await client_ptb.bot.set_webhook(f"{webhook_base_url}/telegram_webhooks/clients")
     yield
+    await client_ptb.bot.delete_webhook()
 
 app = FastAPI(lifespan=lifespan)
 
