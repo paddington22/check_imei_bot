@@ -9,4 +9,8 @@ class Settings(BaseSettings):
         env_file=BASE_DIR / ".env", env_file_encoding="utf-8"
     )
 
-    API_TOKEN: str
+    CLIENTS_BOT_TOKEN: str
+    BOT_WEBHOOK_URL: str
+
+
+settings = Settings()
