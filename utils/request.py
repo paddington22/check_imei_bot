@@ -9,7 +9,7 @@ url = 'https://api.imeicheck.net/v1/checks'
 
 
 # Execute request
-def get_request(token, device_id):
+def get_request(token: str, device_id: str):
     headers = {
         'Authorization': 'Bearer ' + token,
         'Content-Type': 'application/json'
