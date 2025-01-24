@@ -23,6 +23,7 @@ class Settings(BaseSettings):
     SALT: str
     ACCESS_TOKEN_EXPIRE_SECONDS: int = 18000  #5 hours
     ACCESS_TOKEN_SECRET: SecretStr
+    API_TOKEN: str
 
     def pg_conn(self):
         return {

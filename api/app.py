@@ -7,6 +7,7 @@ from settings.config import TORTOISE_CONFIG
 
 from api.v1.check_imei.routes import router as check_imei_router
 from api.v1.auth.routes import router as auth_router
+from api.bot.routes import router as bot_router
 from settings.config import settings
 from utils.tg_bots import client_ptb
 
@@ -32,3 +33,4 @@ app.add_middleware(
 
 app.include_router(check_imei_router)
 app.include_router(auth_router)
+app.include_router(bot_router)
