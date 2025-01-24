@@ -7,7 +7,6 @@ from settings.config import settings
 from utils.tg_bots import client_ptb
 
 
-
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     webhook_base_url = settings.BOT_WEBHOOK_URL
