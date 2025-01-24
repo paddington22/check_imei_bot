@@ -14,8 +14,14 @@ annotated-types==0.7.0
     # via pydantic
 anyio==4.8.0
     # via starlette
+click==8.1.8
+    # via uvicorn
+colorama==0.4.6
+    # via click
 fastapi==0.115.7
     # via check-imei-bot
+h11==0.14.0
+    # via uvicorn
 idna==3.10
     # via anyio
 pydantic==2.10.6
@@ -32,3 +38,5 @@ typing-extensions==4.12.2
     # via fastapi
     # via pydantic
     # via pydantic-core
+uvicorn==0.34.0
+    # via check-imei-bot
